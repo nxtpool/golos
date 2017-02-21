@@ -315,11 +315,12 @@ void comment_evaluator::do_apply( const comment_operation& o )
          else
              FC_ASSERT( (now - auth.last_post) > STEEMIT_MIN_REPLY_INTERVAL, "You may only comment once every 20 seconds", ("now",now)("auth.last_post",auth.last_post) );
       }
+/*
       else
       {
          FC_ASSERT( (now - auth.last_post) > fc::seconds(60), "You may only post once per minute", ("now",now)("auth.last_post",auth.last_post) );
       }
-
+*/
       uint16_t reward_weight = STEEMIT_100_PERCENT;
       uint64_t post_bandwidth = auth.post_bandwidth;
 
